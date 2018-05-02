@@ -1,5 +1,5 @@
-gitCleanDFX='git clean -dfx'
 gitResetHard='git reset --hard'
+gitCleanDFX='git clean -dfx'
 LIGHT_GREEN='\033[92m' # Light Green
 NC='\033[0m' # No Color
 
@@ -14,8 +14,8 @@ do
     exit 0 #successful exit
   else
     echo "\n"
-    $gitCleanDFX
     $gitResetHard
+    $gitCleanDFX
     eval "git fetch $netID"
     eval "git checkout remotes/$netID/submission-$milestone"
 

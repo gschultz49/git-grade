@@ -1,0 +1,25 @@
+gitCleanDFX='git clean -dfx'
+gitResetHard='git reset --hard'
+LIGHT_GREEN='\033[92m' # Light Green
+NC='\033[0m' # No Color
+
+echo "${LIGHT_GREEN}Enter the milestone tag from Github${NC}"
+read milestone
+echo "${LIGHT_GREEN}Enter the netID of the sudent you want to grade${NC}"
+while true
+do
+  read netID
+  if [ $netID = "quit" ]
+  then
+    exit 0 #successful exit
+  else
+    echo "\n"
+    $gitCleanDFX
+    $gitResetHard
+    eval "git fetch $netID"
+    eval "git checkout remotes/$netID/submission-$milestone"
+
+    echo "\n\n${LIGHT_GREEN}Loaded student $netID ${NC}"
+    echo "\n${LIGHT_GREEN}Enter another student to grade or type 'quit' to exit${NC}"
+  fi
+done

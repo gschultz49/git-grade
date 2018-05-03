@@ -21,10 +21,10 @@ Once the script is installed, all you have to do is run `git grade` and enter th
 ## Installation
 
 ### macOS
-You'll simply need to copy the `git-grade` file into your `/usr/local/bin` and restart your terminal
+You'll need to copy the `git-grade` file into your `/usr/local/bin`. Then, run `chmod +x git-grade`. Then restart your terminal
 
 ### Windows
-???
+Copy the `windows/git-grade` file into your `/usr/bin`. Then, run `chmod +x git-grade` and restart git bash. Note, you won't have any fancy colors on this one :(
 
 ### Example Output
 

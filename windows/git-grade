@@ -1,0 +1,23 @@
+#!/usr/bin
+gitResetHard='git reset --hard'
+gitCleanDFX='git clean -dfx'
+echo "Enter the milestone tag from Github"
+read milestone
+echo "Enter the netID of the sudent you want to grade"
+while true
+do
+  read netID
+  if [ $netID = "quit" ]
+  then
+    exit 0 #successful exit
+  else
+    echo "\n"
+    $gitResetHard
+    $gitCleanDFX
+    eval "git fetch $netID"
+    eval "git checkout remotes/$netID/submission-$milestone"
+
+    echo "\n\nLoaded student $netID "
+    echo "\nEnter another student to grade or type 'quit' to exit"
+  fi
+done

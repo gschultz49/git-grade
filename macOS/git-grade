@@ -1,3 +1,4 @@
+#!/usr/local/bin
 gitResetHard='git reset --hard'
 gitCleanDFX='git clean -dfx'
 LIGHT_GREEN='\033[92m' # Light Green

@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/bin/sh
 gitResetHard='git reset --hard'
 gitCleanDFX='git clean -dfx'
 echo "Enter the milestone tag from Github"

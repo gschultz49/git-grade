@@ -18,7 +18,7 @@ do
     $gitResetHard
     $gitCleanDFX
     eval "git fetch $netID"
-    eval "git checkout remotes/$netID/submission-$milestone"
+    eval "git checkout remotes/$netID/$milestone"
 
     echo "\n\n${LIGHT_GREEN}Loaded student $netID ${NC}"
     echo "\n${LIGHT_GREEN}Enter another student to grade or type 'quit' to exit${NC}"
